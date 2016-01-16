@@ -1,0 +1,15 @@
+<div class="swiper-container main_swiper">
+  	<div class="swiper-wrapper clearfix">
+	    <div class="swiper-slide"><img src="images/slide01.jpg" class="img_responsive"></div>
+	    <div class="swiper-slide"><img src="images/slide02.jpg" class="img_responsive"></div>
+	    <div class="swiper-slide"><img src="images/slide03.jpg" class="img_responsive"></div>
+	    <div class="swiper-slide"><img src="images/slide04.jpg" class="img_responsive"></div>
+  	</div>
+  	<div class="swiper-pagination"></div>
+  	<script src="plugin/swiper.min.js"></script>	
+	<script>
+		$(document).ready(function(){
+			var swiper = new Swiper(".main_swiper", {pagination:".swiper-pagination",loop: true,autoplay: 4000,autoplayDisableOnInteraction: false});
+		})		
+	</script>
+</div>

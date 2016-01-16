@@ -1,0 +1,38 @@
+extends layout
+
+block layouts
+	.container.cart_container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				a.i_head.icon_person.i_head_2(href="/person.html")
+				h3.i_head_title Community
+				a.i_head.icon_wish.i_head_4(href="/wish.html")
+		.main
+			.segment_box.point_seg
+				.segment
+					a.segment_item.active Pro Shots
+					a.segment_item My Posts
+				span.seg_index
+			.com_wrap
+				- for (var i=0;i<6;i++)
+					.com_item
+						.item_top
+							.user_img
+								img.img_circle.img_responsive(src="images/photo.jpg")
+							strong XUZHAOHUI
+							small 3 days ago
+						.item_body
+							.share_img
+								img(src="images/product/product1.jpg")
+							.info
+								b Vintage Pattern Print Linen Loose Women Irregular Dress
+								span US$ 19.9
+						.item_bottom
+							a.btn
+								span.icon_sm.icon_sm_hand
+								b 12
+							a.btn
+								span.icon_sm.icon_sm_comment
+								b 157
+	include include/scripts

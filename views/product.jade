@@ -1,0 +1,155 @@
+extends layout
+
+block layouts
+	.container.detail_container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				a.i_head.icon_person.i_head_2
+				a.i_head.i_head_logo
+				a.i_head.icon_wish.i_head_3
+				a.i_head.icon_bag.i_head_4
+		.image_view
+			.image_view_body
+				h3.fixed_top Add Images
+				.com_wrap
+					- for (var i=0;i<6;i++)
+						.com_item
+							.item_top
+								.user_img
+									img.img_circle.img_responsive(src="images/photo.jpg")
+								span XUZHAOHUI
+								small 3 days ago
+							.item_body
+								.share_img
+									img(src="images/product/product1.jpg")
+								.info
+									b Vintage Pattern Print Linen Loose Women Irregular Dress
+									span US$ 19.9
+							.item_bottom
+								a.btn
+									span.icon_sm.icon_sm_hand
+									b 12
+								a.btn
+									span.icon_sm.icon_sm_comment
+									b 157
+		.main
+			.swiper-container.detail_swiper
+				.swiper-wrapper.clearfix
+					- for (var i=1;i<5;i++)
+						.swiper-slide
+							img.img_responsive(src="images/product/product#{i}.jpg")
+				.swiper-pagination
+			.cru_nav
+				ul.clearfix
+					li
+						a(href="/") Home
+					li &raquo;
+					li
+						a(href="/") Jewelry
+					li &raquo;
+					li
+						a(href="/") Pendants
+			.good_top
+				h3.title Hexagonal Gemstone Column Quartz Necklace Pendant
+				.sec_pri.clearfix
+					span.price.price_currency US$3.88
+					span.old_price US$7.13
+				small.StockMessage In stock, usually dispatched in 1 business day
+			.det_sizes
+				.color
+					select.sele_box
+						- for (var i=1;i<5;i++)
+							option(value="Rose0") Rose0
+					.i_arr
+						span.arrow_d
+				.size
+					select.sele_box
+						- for (var i=1;i<5;i++)
+							option(value="Rose0") Rose0
+					.i_arr
+						span.arrow_d
+				.qty
+					select.sele_box
+						- for (var i=1;i<5;i++)
+							option(value="Rose0") Rose0
+					.i_arr
+						span.arrow_d
+			.det_option
+				.op_btns.clearfix
+					a.add_bag_btn Add To Bag
+					a.add_wish_btn Add to Wishlist
+				.op_share
+					dl.clearfix
+						dt Share :
+						dd
+							ul
+								li.i_fb
+									a(href="")
+								li.i_pt
+									a(href="")
+								li.i_tw
+									a(href="")
+								li.i_pv
+									a(href="")
+				.det_askq
+					a
+						small Ask a Question
+					.arrow_d
+						i
+							i
+			.description
+				h3.nc_title Description
+				.description_info
+					P
+						ul
+							li - Snake print design
+							li - Slim lapel
+							li - Cropped cut
+							li - Front pockets 
+				span.detail_info_more
+					a(href="") Read more &#62;
+			.reviews
+				h3.nc_title Reviews
+					a.i_head.icon_camera.i_head_3
+					a.i_head.icon_write.i_head_4
+				//.nodata No Reviews
+				.overall
+					span.rating.noreview Overall rating:
+					span.review_star
+						a(href="#")
+							i.star
+								i
+							small (3)
+				ul.reviews_list
+					- for (var i=1;i<5;i++)
+						li <span class="user"><img src="images/photo.jpg">srchokols<s class="date">3 months ago</s></span><span class="title"><b class="review_star"><a href="javascript:void(0);"><i class="star"><i style="width:100.0%"></i></i></a></b>Great product. // Muy buen producto.</span><span class="info">Nice fit, well made and awesome price. // Buen ajuste, bien fabricado a un precio increible.</span>
+			.det_ML
+				h3.nc_title You Might Also Like
+				ul
+					- for (var i=1;i<10;i++)
+						li
+							a(href="{{product.url}}")
+								span.img_box
+									span.img_in
+										img.img_responsive(src="images/product/product#{i}.jpg")
+								span.text
+									strong US$19.9
+			.det_se_grou
+				ul.se_g_ul
+					li
+						select.sele_g_box
+							- for (var i=1;i<5;i++)
+								option(value="Rose0") Rose0
+						.i_arr
+							span.arrow_d
+					li
+						.se_g_box
+							strong ABOUT
+							.i_arr
+								span.arrow_d
+						ul.drop_d
+							li
+								a(href="") Contact Us
+		include include/foot
+	include include/scripts

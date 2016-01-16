@@ -1,0 +1,27 @@
+extends layout
+
+block layouts
+	.container.wish_container(ng-app="dataList" ng-controller="myDataList")
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				h3.i_head_title My Wishlist
+				span.i_head.icon_bag.i_head_4
+		.main.wish_main
+			h3.nc_title <span>12</span> Products
+			.collection_view.wish_pro
+				ul
+					- for (var j = 0;j<1;j++)
+						li.col_6(ng-repeat="product in pro")
+							a(href="product.html")
+								span.img_box
+									span.img_in
+										img.img_responsive(src="{{product.img}}")
+								span.title {{product.title}}							
+								strong.price US${{product.price}}
+							.bot_btns
+								a.btn
+									span.icon_sm.icon_sm_remove
+								a.btn
+									span.icon.icon_bag_pink
+	include include/scripts

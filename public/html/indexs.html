@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="keywords" content="Off Shoulder Round Neck Short Sleeve Stretch Loose T-Shirt on sale at wholesale price,Red, S, Buy best ,  at newchic.com">
+    <meta name="description" content="Off Shoulder Round Neck Short Sleeve Stretch Loose T-Shirt, ">
+    <title>Off Shoulder Round Neck Short Sleeve Stretch Loose T-Shirt-fashion, - newchic.com  </title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link href="http://mbeta.newchic.com/templates/wap/images/logo_small.jpg" rel="Shortcut Icon">
+    <link href="http://mbeta.newchic.com/templates/wap/images/logo_small.jpg" rel="Bookmark">
+    <script type="text/javascript" src="http://mbeta.newchic.com/templates/wap/js/jquery-1.9.1.min.js"></script>
+    <meta property="og:image" content="http://img.newchic.com/thumb/view/upload/2015/09/SKU241921(1).jpg">
+  </head>
+  <body>
+    <div class="container-fluid index_container">
+      <nav class="navbar navbar-default navbar-fixed-top top-nav default-nav">
+        <div class="pull-left"><a class="btn btn-navbar"><span class="glyphicon glyphicon-list"></span></a></div>
+        <div class="pull-right"><a data-toggle="collapse" data-target="#bs-example" aria-expanded="false" class="btn btn-navbar"><span class="glyphicon glyphicon-search"></span></a></div>
+        <h4 class="navbar-text text-center">Newchic</h4>
+      </nav>
+      <div class="search_modal_bg">
+        <nav class="navbar navbar-default navbar-fixed-top top-nav search-nav">
+          <form role="search" class="form clearfix">
+            <div class="input-group col-xs-11 pull-left"></div>
+          </form>
+          <div class="collapse navbar-collapse">
+            <div class="list-group">
+              <h5 class="list-group-head center-block">History:</h5>
+              <button type="button" data-class="" class="list-group-item">Cras justo odio</button>
+              <button type="button" data-class="" class="list-group-item">Dapibus ac facilisis in</button>
+              <button type="button" data-class="" class="list-group-item">Morbi leo risus</button>
+              <button type="button" data-class="" class="list-group-item">Porta ac consectetur ac</button>
+              <button type="button" data-class="" class="list-group-item">Vestibulum at eros</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div bg-app="dataList" ng-controller="myDataList" class="clearfix data-list">
+        <div class="col-xs-6">
+          <div bg-repeat="product in pro" class="media-box clearfix">
+            <div class="media-inner"><a href="detail.html" class="clearfix"><img src="" class="img-respone">
+                <div class="caption">
+                  <p>{{product.title}}</p>
+                  <big>{{product.price}}</big>
+                </div></a><span class="glyphicon glyphicon-option-horizontal"></span></div>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div bg-repeat="product in pro" class="media-box clearfix">
+            <div class="media-inner"><a href="detail.html" class="clearfix"><img src="" class="img-respone">
+                <div class="caption">
+                  <p>{{product.title}}</p>
+                  <big>{{product.price}}</big>
+                </div></a><span class="glyphicon glyphicon-option-horizontal"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var app = angular.module("dataList", []);
+      	app.controller("myDataList", function($scope,$http) {
+      	    $http.get("productList.php").success(function (response) {
+      	    	$scope.pro=[];
+      	    	$.each(response,function(i,val){
+      	    		var product=new Object();
+      	    		product.title=val["p_title"];
+      	    		product.price=val["p_price"];
+      	    		product.img=val["p_img"];
+      	    		$scope.pro.push(product);
+      	    	});
+      	    });
+      	});
+    </script>
+  </body>
+</html>

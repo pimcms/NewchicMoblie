@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="keywords" content="Off Shoulder Round Neck Short Sleeve Stretch Loose T-Shirt on sale at wholesale price,Red, S, Buy best ,  at newchic.com">
+    <meta name="description" content="Off Shoulder Round Neck Short Sleeve Stretch Loose T-Shirt, ">
+    <title>Off Shoulder Round Neck Short Sleeve Stretch Loose T-Shirt-fashion, - newchic.com</title>
+    <link rel="stylesheet" type="text/css" href="min/style.min.css">
+    <script src="http://apps.bdimg.com/libs/angular.js/1.3.9/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="dataList" ng-controller="myDataList" class="container">
+      <div class="header_wrap">
+        <div class="header"><a href="/cate.html" class="i_head icon_cate i_head_1"></a><a href="/person.html" class="i_head icon_person i_head_2"></a><a href="/" class="i_head i_head_logo"></a><a href="/wish.html" class="i_head icon_wish i_head_3"></a><a href="/cart.html" class="i_head icon_bag i_head_4"></a></div>
+      </div>
+      <div class="wish_view"></div>
+      <div class="main">
+        <div class="swiper-container main_swiper">
+          <div class="swiper-wrapper clearfix">
+            <div class="swiper-slide"><img ng-src="images/slide01.jpg" class="img_responsive"></div>
+            <div class="swiper-slide"><img ng-src="images/slide02.jpg" class="img_responsive"></div>
+            <div class="swiper-slide"><img ng-src="images/slide03.jpg" class="img_responsive"></div>
+            <div class="swiper-slide"><img ng-src="images/slide04.jpg" class="img_responsive"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="index_sort">
+          <div class="swipe_level index_sort"><a href="category.html" class="swipe_item"><span class="i_cate cate_8"></span><span class="text">Clearance</span></a><a href="category.html" class="swipe_item"><span class="i_cate cate_0"></span><span class="text">Dresses</span></a><a href="category.html" class="swipe_item"><span class="i_cate cate_1"></span><span class="text">Tops</span></a><a href="category.html" class="swipe_item"><span class="i_cate cate_2"></span><span class="text">Outerwear</span></a><a href="category.html" class="swipe_item"><span class="i_cate cate_3"></span><span class="text">Bottoms</span></a><a href="category.html" class="swipe_item"><span class="i_cate cate_4"></span><span class="text">Bags</span></a><a href="category.html" class="swipe_item"><span class="i_cate cate_5"></span><span class="text">Shoes</span></a><a href="category.html" class="swipe_item"><span class="i_cate cate_6"></span><span class="text">Plus Size</span></a><a href="category.html" class="swipe_item"><span class="i_cate cate_7"></span><span class="text">Jewelry</span></a>
+          </div>
+        </div>
+        <div class="collection_view index_pro">
+          <h3 class="nc_title">Recommend</h3>
+          <ul>
+            <li ng-repeat="product in pro" class="col_4"><a href="product.html"><span class="img_box"><span class="img_in"><img ng-src="{{product.img}}" class="img_responsive"></span></span>
+                <!--span.title {{product.title}}--><strong class="price">US${{product.price}}<span class="icon icon_wish_gray"></span></strong><span class="dist">88% Off</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="nc_op_btns">
+          <div class="col_4"><a href="contactus.html" class="ft_btn ft_btn_CU"><span></span><small>Contact us</small></a></div>
+          <div class="col_4"><a href="setting.html" class="ft_btn ft_btn_ST"><span></span><small>Settings</small></a></div>
+          <div class="col_4"><a href="community.html" class="ft_btn ft_btn_CMT"><span></span><small>Community</small></a></div>
+        </div>
+        <div class="email_box">
+          <form>
+            <input type="text" placeholder="Your Email Address" class="form_input col_9"><a type="submit" class="btn_sub btn btn_black">Subscribe</a>
+          </form>
+        </div>
+        <div class="links">
+          <div class="links_in"><a href="/" class="btn">Home</a><a href="#" class="btn">Full Site</a></div>
+        </div>
+        <div class="com_icons">
+          <div class="i_nt"><img src="images/i_nt.png"></div>
+          <div class="i_com"><img src="images/i_com.png"></div>
+          <div class="det_fo">
+            <p>Copyright ©2014-2015 <a href="/">Newchic.com</a>. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="plugin/jquery-1.9.1.min.js"></script>
+    <script src="plugin/inobounce.min.js"></script>
+    <script src="plugin/swiper.min.js"></script>
+    <script src="javascripts/modal.js"></script>
+    <script src="javascripts/getData.js"></script>
+    <script>var swiper = new Swiper(".main_swiper", {pagination:".swiper-pagination",loop: true,autoplay: 4000,autoplayDisableOnInteraction: false});</script>
+  </body>
+</html>

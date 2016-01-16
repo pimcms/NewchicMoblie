@@ -1,0 +1,32 @@
+extends layout
+
+block layouts
+	.container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				h3.i_head_title Contact Us
+				span.btn_head_right Submit
+		.main.ct_main
+			ul.list_group
+				li.list_group_item
+					.group_top
+						b Change Your Photo
+						span.icon_sm.icon_sm_arr_d
+					.inner_group
+						ul.list_group.select
+							- var items=["Dresses","Tops","Outerwear","Bottoms","Bags","Shoes","Plus Size","Jewelry"]
+							- each item in items
+								li.list_group_item
+									b #{item}
+									span.icon_sm.icon_sm_check_pink
+				li.list_group_item
+					textarea.input_hideform(placeholder="Your Message...")
+				- var items={"n_name":"Nickname","email":"Email","phone":"Telephone","o_number":"Order Number"}
+				- each item,key in items
+					li.list_group_item
+						input.input_hideform(type="text" placeholder="#{item}" id="#{key}")
+				li.list_group_item
+					.btn_add_img.icon_add
+						input.add_img(type="file")
+	include include/scripts

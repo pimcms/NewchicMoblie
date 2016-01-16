@@ -1,0 +1,55 @@
+extends layout
+
+block layouts
+	.container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				h3.i_head_title Order Detail
+		.main.order_detail
+			h3.nc_title Order Information
+			dl.info
+				dt Order Status:
+				dd Shipped
+				dt Order Date:
+				dd Aug 04, 2015
+				dt Order No:
+				dd 300007605
+			h3.nc_title Product List
+			.list_group
+				- for (var i=1;i<5;i++)
+					.order_item.list_group_item
+						dl
+							dt
+								span
+									img.img_responsive(src="images/product/product#{i}.jpg")
+							dd
+								.item_text
+									p Casual Thick Warm Belt Slim Hood Long Down Coatitem_size
+									span.item_size
+										small Color: <strong>Black</strong>
+										small Size: <strong>UK 18</strong>
+									span.item_size
+										small Qty: <strong>1</strong>
+									strong.pri US$19.9
+			h3.nc_title Shipping Method
+			.des
+				p LC_SHIPMENT_
+			h3.nc_title Shipping Address
+			.des
+				p.
+					chi zeng <br />
+					CCREJECT-REFUSED ,San Jose, CA,United States
+			h3.nc_title Payment Method
+			.des
+				p PayPal Express Checkout
+			h3.nc_title Total
+			dl.info
+				dt Sub-Total:
+				dd US$23.23
+				dt LC_SHIPMENT_:
+				dd US$0.00
+				dt Total:
+				dd US$23.23
+		include include/foot
+	include include/scripts			

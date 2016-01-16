@@ -1,0 +1,39 @@
+.item_view
+	.view_body
+		.cart_item_container
+				.cart_item
+					dl.clearfix
+						dt
+							span
+								img.img_responsive(src="images/product/product1.jpg")
+						dd
+							.item_text
+								p Casual Thick Warm Belt Slim Hood Long Down Coat								
+							p.fl_bot
+								span.pri US$45.12								
+		ul.list_group.filter_group
+			- var size_items = ["Size","Color"]
+			- each size_item,index in size_items
+				li.list_group_item
+					.group_top
+						b #{size_item}
+						s Color
+						span.icon_sm.icon_sm_arr_d
+					ul.inner_group
+						- for (var j=0;j<10;j++)
+							li
+								button Sleeveless
+			li.list_group_item.item_qty
+						.group_top
+							strong Qty
+							b 1
+							span.icon_sm.icon_sm_arr_d
+						.inner_group
+							ul.list_group.select.clearfix
+								- for(var i=1;i<20;i++)								
+									li.list_group_item
+										b #{i}
+										span.icon_sm.icon_sm_check_pink
+		.item_option
+			a.btn.save Save
+			a.btn.cancel Cancel

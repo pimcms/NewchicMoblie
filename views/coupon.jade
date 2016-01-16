@@ -1,0 +1,28 @@
+extends layout
+
+block layouts
+	.container.cart_container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				a.i_head.icon_person.i_head_2(href="/person.html")
+				h3.i_head_title Coupons
+				a.i_head.icon_wish.i_head_4(href="/wish.html")
+		.main
+			.segment_box.cou_seg
+				.segment
+					a.segment_item.active Unused
+					a.segment_item Used
+					a.segment_item Expired				
+				span.seg_index
+			.cou_content
+				- for (var n=0;n<3;n++)
+					ul.list_group.cou_list(class="seg_page#{n}")
+						- for (var i=0;i<6;i++)
+							li.list_group_item
+								h4.cou_title $1 Off orders over $50 #{n}
+								small US$ 1 off orders of US$ 50.00 or more
+								small Code: #126456
+								small Expires on: 04-10-2015
+								a.btn.btn_pink Copy
+	include include/scripts

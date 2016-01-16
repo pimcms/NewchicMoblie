@@ -1,0 +1,24 @@
+extends layout
+
+block layouts
+	.container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				h3.i_head_title My Doubts
+				span.i_head.icon_add_white.i_head_4
+		.main
+			.doubt_box
+				- for (var i=0; i<6; i++)
+					.doubt_item
+						h3 I have a problem placing an order
+						small 2015-09-11 02:49:13
+						.doubt_body
+							p.
+								this is a test
+						.reply
+							big No reply yet.
+						.reply
+							big Reply:
+							small Not reply yet, please wait a ...
+	include include/scripts

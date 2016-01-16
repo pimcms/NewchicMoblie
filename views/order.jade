@@ -1,0 +1,51 @@
+extends layout
+
+block layouts
+	.container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				h3.i_head_title My Orders
+		.main.ct_main
+			ul.list_group
+				li.list_group_item
+					.group_top
+						b Change Your Photo
+						span.icon_sm.icon_sm_arr_d
+					.inner_group
+						ul.list_group.select
+							- var items=["Dresses","Tops","Outerwear","Bottoms","Bags","Shoes","Plus Size","Jewelry"]
+							- each item in items
+								li.list_group_item
+									b #{item}
+									span.icon_sm.icon_sm_check_pink
+			.order_item_box
+				- for (var j=0;j<3;j++)
+					h3.nc_title Order No:<span class="num_font">121545</span><a class="btn_order">Shipping</a>
+					.list_group
+						- for (var i=1;i<5;i++)
+							.order_item.list_group_item
+								dl
+									dt
+										span
+											img.img_responsive(src="images/product/product#{i}.jpg")
+									dd
+										.item_text
+											p Casual Thick Warm Belt Slim Hood Long Down Coatitem_size
+											span.item_size
+												small Color: <strong>Black</strong>
+												small Size: <strong>UK 18</strong>
+											span.item_size
+												small Qty: <strong>1</strong>
+											strong.pri US$19.9
+						.list_group_item
+							b Order Date: <span class="num_font">Aug 04, 2015</span>
+							span.total Total: <big class="num_font">US$23.23</big>
+						a.list_group_item(href="Track.html")
+							b Order Tracking
+							span.icon_sm.icon_sm_arr_r
+						a.list_group_item(href="order_detail.html")
+							b View Details
+							span.icon_sm.icon_sm_arr_r
+		include include/foot
+	include include/scripts

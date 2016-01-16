@@ -1,0 +1,25 @@
+extends layout
+
+block layouts
+	.container.cart_container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				a.i_head.icon_person.i_head_2(href="/person.html")
+				h3.i_head_title Points
+				a.i_head.icon_wish.i_head_4(href="/wish.html")
+		.main
+			.segment_box.point_seg
+				.segment
+					a.segment_item.active Points
+					a.segment_item Exchange
+				span.seg_index
+			.cou_content
+				ul.list_group.point_list
+					li.list_group_head 0-99
+					- for (var i=0;i<6;i++)
+						li.list_group_item
+							h4.cou_title $1 Off orders over $50 #{n}
+							small US$ 1 off orders of US$ 50.00 or more							
+							a.btn.btn_pink Copy
+	include include/scripts

@@ -1,0 +1,29 @@
+extends layout
+
+block layouts
+	.container.address_container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				h3.i_head_title Manage Address Book
+				a.btn_head_right(href="newaddress.html") Add
+		.main
+			- for (var i=1;i<4;i++)
+				.add_item_box.sec_ade
+					h3.nc_title Address #{i}
+					dl
+						dt Full name:
+						dd Burne-Jones
+						dt Region:
+						dd Culver City, CA,USA
+						dt Postal code:
+						dd 90230
+						dt Address:
+						dd 4114 Sepulveda Blvd
+					.item_foot
+						.check_box
+							span.crcle.active
+							span.text Default
+						span.i_common.icon_right.icon_edit
+						span.i_common.icon_right.icon_remove
+	include include/scripts

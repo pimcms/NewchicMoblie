@@ -1,0 +1,50 @@
+extends layout
+
+block layouts
+	.container(ng-app="dataList" ng-controller="myDataList")
+		.header_wrap
+			.header
+				a.i_head.icon_cate.i_head_1(href="/cate.html")
+				a.i_head.icon_person.i_head_2(href="/person.html")
+				a.i_head.i_head_logo(href="/")
+				a.i_head.icon_wish.i_head_3(href="/wish.html")
+				a.i_head.icon_bag.i_head_4(href="/cart.html")
+		.filter_view
+			ul.list_group.filter_group
+				- for (var i=0;i<10;i++)
+					li.list_group_item
+						.group_top
+							b Color
+							s Color
+							span.icon_sm.icon_sm_arr_d
+						ul.inner_group
+							- for (var j=0;j<10;j++)
+								li
+									button Sleeveless
+		.sort_view
+			ul.list_group.select
+				- for (var i=0;i<5;i++)
+					li.list_group_item
+						b New Arrival
+						span.icon_sm.icon_sm_check_pink
+		.main
+			.collection_view.cate_pro
+				.cate_fil
+					span.col_8
+						strong Dresses
+						i.icon_sm.icon_sm_arr
+					a.icon.icon_fil
+					a.icon.icon_sort
+				ul
+					- for (var j = 0;j<1;j++)
+						li.col_6(ng-repeat="product in pro")
+							a(href="product.html")
+								span.img_box
+									span.img_in
+										img.img_responsive(ng-src="{{product.img}}")
+								span.title {{product.title}}
+								strong.price US${{product.price}}
+									span.icon.icon_wish_gray
+								span.dist 88% Off
+	include include/scripts
+	

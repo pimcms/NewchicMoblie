@@ -1,0 +1,47 @@
+extends layout
+
+block layouts
+	.container.cart_container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				a.i_head.icon_person.i_head_2(href="/person.html")
+				a.i_head.i_head_logo(href="/")
+				a.i_head.icon_wish.i_head_4(href="/wish.html")
+		include include/item_edit
+		.main
+			.ca_tips
+				p Add more <span class="price" oriprice="195.18">US$195.18</span> (orders over <span class="price" oriprice="399.00">US$399.00</span>) enjoy <span class="price" oriprice="60.00">US$60.00</span> off
+			h3.nc_title <b>Package 1</b> (<em>5</em> Items)
+			include include/cart_items
+			.ca_total
+				dl.dl_CR
+					dt Discount:
+					dd US$60.00
+				dl
+					dt Total:
+					dd
+						s US$1,050.99
+						strong US$532.20
+				.op_btn.clearfix
+					a.btn_CK Continue Checkout
+					p
+						span Or
+						a.btn_pa
+			.save_later
+				h3.nc_title Save For Later (5 Items)
+					span.icon_sm_arr.icon_sm_arr_d
+				include include/cart_items
+			.det_ML
+				h3.nc_title You Might Also Like
+				ul
+					- for (var i=1;i<10;i++)
+						li
+							a(href="{{product.url}}")
+								span.img_box
+									span.img_in
+										img.img_responsive(src="images/product/product#{i}.jpg")
+								span.text
+									strong US$19.9
+		include include/foot
+	include include/scripts

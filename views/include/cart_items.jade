@@ -1,0 +1,24 @@
+.cart_item_container
+	- for (var i=1;i<5;i++)
+		.cart_item
+			dl.clearfix
+				dt
+					span
+						img.img_responsive(src="images/product/product#{i}.jpg")
+				dd
+					.item_text
+						p Casual Thick Warm Belt Slim Hood Long Down Coat
+						span.item_size
+							small Color: <strong>Black</strong>
+							small Size: <strong>UK 18</strong>
+						.qty
+							select.sele_box
+								- for (var n=1;n<5;n++)
+									option(value="#{n}") #{n}
+							.i_arr
+								span.arrow_d
+						a.icon_sm.icon_sm_edit
+						a.icon_sm.icon_sm_remove
+					p.fl_bot
+						span.pri US$45.12
+						span.slt  ≡ Save for later

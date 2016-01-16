@@ -1,0 +1,39 @@
+extends layout
+
+block layouts
+	.container(ng-app="dataList" ng-controller="myDataList")
+		include include/head
+		.wish_view
+		.main
+			.swiper-container.main_swiper
+				.swiper-wrapper.clearfix
+					- for (var i=1;i<5;i++)
+						.swiper-slide
+							img.img_responsive(ng-src="images/slide0#{i}.jpg")
+				.swiper-pagination
+			.index_sort
+				.swipe_level.index_sort
+					a.swipe_item(href="category.html")
+							span.i_cate(class="cate_8")
+							span.text Clearance
+					- var all_cates=["Dresses","Tops","Outerwear","Bottoms","Bags","Shoes","Plus Size","Jewelry"]					
+					- each cate_item,indexs in all_cates
+						a.swipe_item(href="category.html")
+							span.i_cate(class="cate_#{indexs}")
+							span.text #{cate_item}
+			.collection_view.index_pro
+				h3.nc_title Recommend
+				ul
+					li.col_4(ng-repeat="product in pro")
+						a(href="product.html")
+							span.img_box
+								span.img_in
+									img.img_responsive(ng-src="{{product.img}}")
+							//span.title {{product.title}}
+							strong.price US${{product.price}}
+								span.icon.icon_wish_gray
+							span.dist 88% Off
+		include include/foot
+	include include/scripts
+	script.
+		var swiper = new Swiper(".main_swiper", {pagination:".swiper-pagination",loop: true,autoplay: 4000,autoplayDisableOnInteraction: false});

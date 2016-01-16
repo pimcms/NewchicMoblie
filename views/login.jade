@@ -1,0 +1,9 @@
+extends layout
+
+block layouts
+	.container
+		form(action="/users/loginAction" method="post")
+			input.form_control(type="text" name="username")
+			input.form_control(type="password" name="password")
+			input.form_control(type="text" name="age")
+			input.btn(type="submit" val="Submit")

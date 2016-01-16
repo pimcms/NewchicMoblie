@@ -1,0 +1,24 @@
+extends layout
+
+block layouts
+	.container.address_container
+		.header_wrap
+			.header
+				a.i_head.icon_back.i_head_1
+				a.i_head.i_head_logo(href="/")
+		.main.setting
+			ul.list_group
+				- for(var i=0;i<2;i++)
+					li.list_group_item
+						.group_top
+							strong Currency
+							b US
+							span.icon_sm.icon_sm_arr_d
+						.inner_group
+							ul.list_group.select
+								- var items=["Dresses","Tops","Outerwear","Bottoms","Bags","Shoes","Plus Size","Jewelry"]
+								- each item in items
+									li.list_group_item
+										b #{item}
+										span.icon_sm.icon_sm_check_pink
+	include include/scripts

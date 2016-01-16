@@ -1,0 +1,55 @@
+extends layout
+
+block layouts
+	.container.newadd_container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				h3.i_head_title New Address
+				span.btn_head_right Save
+		.country_view
+			.country_view_wrap
+				.sele_top
+					h3.nc_title.res_nav 
+						strong A
+						span.icon_sm.icon_sm_arr_d
+					ul.show
+						- var char_navs = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","X","Y","Z"]
+						- each char_nav in char_navs
+							li(data_val="#{char_nav}") #{char_nav}
+				.country_list
+					ul.list_group
+						- for (var i=0;i<50;i++)
+							li.list_group_item(data_val="U") United States
+		.main.newadd_main
+			ul.list_group
+				li.list_group_item (<i class="must">*</i> Indicates a fields is required)
+				li.list_group_item
+					input.input_hideform(type="text" placeholder="First Name")
+					span.must *
+				li.list_group_item
+					input.input_hideform(type="text" placeholder="Street Address")
+					span.must *
+				li.list_group_item
+					input.input_hideform(type="text" placeholder="Address2(Optional)")
+				li.list_group_item
+					strong.sele_country United States
+					span.icon_sm.icon_sm_arr_d
+				li.list_group_item
+					select.input_hideform
+						option United States
+					span.must *
+					span.icon_sm.icon_sm_arr_d
+				li.list_group_item
+					input.input_hideform(type="text" placeholder="City")
+					span.must *
+				li.list_group_item
+					input.input_hideform(type="text" placeholder="Postal Code")
+					span.must *
+				li.list_group_item
+					.check
+						.check_box.active
+							span.crcle
+							span.text User as my default address
+						//span.switch
+	include include/scripts

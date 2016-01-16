@@ -1,0 +1,39 @@
+extends layout
+
+block layouts
+	.container.person_container
+		.header_wrap
+			.header
+				span.i_head.icon_back.i_head_1
+				a.i_head.i_head_logo
+				a.i_head.icon_bag.i_head_4
+		.main
+			.menu_person_box
+				a(href="person_info.html")
+					.menu_person
+						.person_img.col_2
+							img.img_responsive.img_circle(src="images/photo.jpg")
+						.person_text.col_10
+							h2 Marry
+							p Valid Point: <span class="">0</span> points
+						span.icon.icon_arr_r
+			.sec_group
+				ul
+					-var items={"coupon":"Coupons","wish":"Wishlist","point":"Points"}
+					- each this_text,this_href in items
+						li
+							a(href="#{this_href}.html")
+								strong.pink 12
+								span #{this_text}					
+			.list_group.menu_items
+				- var menu_items = [{class_name:"order",text:"My Orders",herf_for:"order.html"},{class_name:"location",text:"Manage Address Book",herf_for:"address.html"},{class_name:"lock",text:"Change Password",herf_for:"pass.html"},{class_name:"message",text:"My Messages",herf_for:"message.html"},{class_name:"doubt",text:"My Doubts",herf_for:"doubt.html"}]
+				- each sub_menu in menu_items
+					a.list_group_item(href="#{sub_menu.herf_for}")
+						span(class="i_person icon_sm_#{sub_menu.class_name}")
+						b #{sub_menu.text}
+						span.icon_sm.icon_sm_arr_r
+			.menu_option.list_group
+				a.list_group_item
+					span.icon_menu.icon_layout
+					b Layout
+	include include/scripts

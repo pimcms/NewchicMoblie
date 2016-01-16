@@ -1,0 +1,16 @@
+<ul>
+    <li ng-repeat="product in pro" class="col_4">
+    	<a href="/{{product.url}}">
+    		<span class="img_box">
+    			<span class="img_in">
+    				<img src="{{product.img}}" class="img_responsive">
+    			</span>
+    		</span>
+    		<span class="text">
+    			<strong>{{product.price}}</strong>
+    		</span>
+    		<span class="icon icon_wish"></span>
+    		<span class="dist"></span>
+    	</a>
+    </li>
+</ul>

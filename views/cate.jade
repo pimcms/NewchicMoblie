@@ -1,0 +1,30 @@
+extends layout
+
+block layouts
+	.container(ng-app="dataList" ng-controller="myDataList")
+		.header_wrap
+			.header
+				a.i_head.icon_back.i_head_1
+				a.i_head.i_head_logo(href="/")
+				a.i_head.icon_bag.i_head_4(href="/cart.html")
+		.main
+			.search_box
+				form
+					input.col_11.form_input(tppe="text")
+					a.btn.btn_icon_search.col_1
+			.sub_cate_box
+				ul.list_group
+					- var all_cates=["Clearance","Dresses","Tops","Outerwear","Bottoms","Bags","Shoes","Plus Size","Jewelry"]
+					- each all_cate_item,indexs in all_cates
+						li.list_group_item
+							.group_top
+								b #{all_cate_item}
+								span.icon_sm.icon_sm_arr_d
+							.inner_group
+								.sub_cate
+									.sub_cate_l
+										.cate_img(class="i_#{indexs}")
+									.sub_cate_r
+										- each cate_item in all_cates
+											a(href="") #{cate_item}
+	include include/scripts
